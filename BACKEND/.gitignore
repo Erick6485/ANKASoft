@@ -1,0 +1,29 @@
+# Variables de Entorno
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Entorno Virtual
+venv/
+
+# Base de Datos
+*.sqlite3
+*.db
+*.sql.backup
+*.dump
+
+# Docker
+.env.docker.local
+*.log
+docker-compose.override.yml
+
+# Sistema
+.DS_Store
+Thumbs.db
+

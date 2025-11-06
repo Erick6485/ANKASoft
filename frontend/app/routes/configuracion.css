@@ -1,0 +1,253 @@
+/* Configuración - Diseño Profesional */
+
+.config-container {
+  padding: 30px;
+  background: #f6fafd;
+  min-height: calc(100vh - 64px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.config-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.config-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a1931;
+  margin: 0 0 10px 0;
+}
+
+.config-header p {
+  font-size: 1.1rem;
+  color: #4a7fa7;
+  margin: 0;
+}
+
+/* Secciones de Configuración */
+.config-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(26, 61, 99, 0.1);
+  border: 2px solid #b3cfe5;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #b3cfe5;
+}
+
+.section-icon {
+  font-size: 1.8rem;
+  color: #1a3d63;
+}
+
+.section-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0a1931;
+  margin: 0;
+}
+
+/* Opciones de Configuración */
+.config-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.config-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f6fafd;
+  border-radius: 12px;
+  border: 1px solid #b3cfe5;
+  transition: all 0.2s;
+}
+
+.config-item:hover {
+  background: white;
+  border-color: #1a3d63;
+  box-shadow: 0 2px 8px rgba(26, 61, 99, 0.1);
+}
+
+.config-label {
+  flex: 1;
+}
+
+.config-label span {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0a1931;
+  margin-bottom: 5px;
+}
+
+.config-label p {
+  font-size: 0.9rem;
+  color: #4a7fa7;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Toggle Switch */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b3cfe5;
+  transition: 0.3s;
+  border-radius: 32px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.toggle input:checked + .toggle-slider {
+  background-color: #00b341;
+}
+
+.toggle input:checked + .toggle-slider:before {
+  transform: translateX(28px);
+}
+
+/* Inputs y Selects */
+.config-input,
+.config-select {
+  padding: 10px 15px;
+  border: 2px solid #b3cfe5;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #0a1931;
+  font-weight: 500;
+  background: white;
+  min-width: 200px;
+  transition: all 0.2s;
+}
+
+.config-input:focus,
+.config-select:focus {
+  outline: none;
+  border-color: #1a3d63;
+  box-shadow: 0 0 0 3px rgba(26, 61, 99, 0.1);
+}
+
+/* Acciones */
+.config-actions {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px 0;
+}
+
+.btn-guardar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 40px;
+  background: #1a3d63;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(26, 61, 99, 0.3);
+}
+
+.btn-guardar:hover {
+  background: #0a1931;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(26, 61, 99, 0.4);
+}
+
+.btn-guardar.guardado {
+  background: #00b341;
+}
+
+.btn-guardar svg {
+  font-size: 1.3rem;
+}
+
+/* Info */
+.config-info {
+  background: linear-gradient(135deg, #e6f7ed 0%, #ffffff 100%);
+  border: 2px solid #00b341;
+  border-radius: 12px;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.config-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #4a7fa7;
+  line-height: 1.6;
+}
+
+.config-info strong {
+  color: #0a1931;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .config-container {
+    padding: 20px;
+  }
+
+  .config-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .config-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .config-input,
+  .config-select {
+    width: 100%;
+  }
+
+  .toggle {
+    align-self: flex-start;
+  }
+}
+

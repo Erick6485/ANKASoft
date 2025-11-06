@@ -1,0 +1,111 @@
+/* Páginas Simples - Diseño Profesional */
+
+.simple-container {
+  padding: 60px 30px 30px 30px;
+  background: #f6fafd;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simple-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(26, 61, 99, 0.1);
+  border: 2px solid #b3cfe5;
+}
+
+.simple-icon {
+  font-size: 5rem;
+  color: #1a3d63;
+  margin-bottom: 30px;
+}
+
+.simple-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a1931;
+  margin: 0 0 15px 0;
+}
+
+.simple-description {
+  font-size: 1.2rem;
+  color: #4a7fa7;
+  margin: 0 0 40px 0;
+  line-height: 1.6;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-item {
+  padding: 15px 20px;
+  background: linear-gradient(to right, #f0f7ff 0%, white 100%);
+  border-left: 4px solid #1a3d63;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  color: #0a1931;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.feature-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(26, 61, 99, 0.15);
+}
+
+.coming-soon {
+  padding: 20px 30px;
+  background: linear-gradient(135deg, #fffbeb 0%, #fff9e6 100%);
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.coming-soon span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a1931;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .simple-container {
+    padding: 20px;
+  }
+
+  .simple-content {
+    padding: 40px 25px;
+  }
+
+  .simple-icon {
+    font-size: 3.5rem;
+  }
+
+  .simple-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .simple-description {
+    font-size: 1rem;
+  }
+
+  .feature-item {
+    font-size: 0.95rem;
+  }
+}
+
