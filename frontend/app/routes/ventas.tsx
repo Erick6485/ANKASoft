@@ -72,13 +72,13 @@ export default function Ventas() {
     <Layout>
       <div className="ventas-container">
         <div className="ventas-header">
-          <h1>📋 Dashboard de Ventas</h1>
+          <h1> Dashboard de Ventas</h1>
           <p>Monitoreo en tiempo real de transacciones y rendimiento</p>
         </div>
 
         {/* Métricas del Día */}
         <div className="metricas-section">
-          <h3 className="section-title">📅 Ventas de Hoy</h3>
+          <h3 className="section-title"> Ventas de Hoy</h3>
           <div className="metricas-grid">
             <div className="metrica-card hoy">
               <div className="metrica-icon">
@@ -114,7 +114,7 @@ export default function Ventas() {
 
         {/* Métricas del Mes */}
         <div className="metricas-section">
-          <h3 className="section-title">📊 Ventas del Mes Actual</h3>
+          <h3 className="section-title"> Ventas del Mes Actual</h3>
           <div className="metricas-grid">
             <div className="metrica-card mes">
               <div className="metrica-icon">

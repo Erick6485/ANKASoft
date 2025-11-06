@@ -87,19 +87,19 @@ export default function Reportes() {
     <Layout>
       <div className="reportes-container">
         <div className="reportes-header">
-          <h1>📄 Centro de Reportes</h1>
+          <h1> Centro de Reportes</h1>
           <p>Genera y descarga reportes completos del sistema</p>
           <span className="periodo-badge">{reporteData.periodo}</span>
         </div>
 
         {/* Resumen Ejecutivo */}
         <div className="resumen-ejecutivo">
-          <h3 className="section-title">📊 Resumen Ejecutivo</h3>
+          <h3 className="section-title"> Resumen Ejecutivo</h3>
           
           <div className="resumen-grid">
             {/* Ventas */}
             <div className="resumen-card ventas">
-              <h4>💰 Ventas</h4>
+              <h4> Ventas</h4>
               <div className="resumen-items">
                 <div className="resumen-item">
                   <span className="item-label">Transacciones:</span>
@@ -118,7 +118,7 @@ export default function Reportes() {
 
             {/* Inventario */}
             <div className="resumen-card inventario">
-              <h4>📦 Inventario</h4>
+              <h4> Inventario</h4>
               <div className="resumen-items">
                 <div className="resumen-item">
                   <span className="item-label">Total Productos:</span>
@@ -137,7 +137,7 @@ export default function Reportes() {
 
             {/* Operaciones */}
             <div className="resumen-card operaciones">
-              <h4>🏪 Operaciones</h4>
+              <h4> Operaciones</h4>
               <div className="resumen-items">
                 <div className="resumen-item">
                   <span className="item-label">Sucursales Activas:</span>
@@ -173,10 +173,10 @@ export default function Reportes() {
                 <h4>Reporte Completo de Ventas</h4>
                 <p>Análisis detallado de ventas por categoría, género y sucursal</p>
                 <ul className="reporte-incluye">
-                  <li>✅ Ventas por categoría</li>
-                  <li>✅ Distribución por género</li>
-                  <li>✅ Performance por sucursal</li>
-                  <li>✅ Top productos vendidos</li>
+                  <li> Ventas por categoría</li>
+                  <li> Distribución por género</li>
+                  <li> Performance por sucursal</li>
+                  <li> Top productos vendidos</li>
                 </ul>
               </div>
               <button 
@@ -198,10 +198,10 @@ export default function Reportes() {
                 <h4>Reporte de Inventario</h4>
                 <p>Estado completo del inventario con valorización</p>
                 <ul className="reporte-incluye">
-                  <li>✅ Estado por categoría</li>
-                  <li>✅ Valorización total</li>
-                  <li>✅ Productos críticos</li>
-                  <li>✅ Métricas de rotación</li>
+                  <li> Estado por categoría</li>
+                  <li> Valorización total</li>
+                  <li> Productos críticos</li>
+                  <li> Métricas de rotación</li>
                 </ul>
               </div>
               <button 
@@ -223,10 +223,10 @@ export default function Reportes() {
                 <h4>Rendimiento por Sucursales</h4>
                 <p>Comparativa y ranking de sucursales</p>
                 <ul className="reporte-incluye">
-                  <li>✅ Ranking de sucursales</li>
-                  <li>✅ KPIs por ubicación</li>
-                  <li>✅ Top productos por tienda</li>
-                  <li>✅ Comparativa mensual</li>
+                    <li> Ranking de sucursales</li>
+                  <li> KPIs por ubicación</li>
+                  <li> Top productos por tienda</li>
+                  <li> Comparativa mensual</li>
                 </ul>
               </div>
               <button 
@@ -248,10 +248,10 @@ export default function Reportes() {
                 <h4>Análisis Temporal</h4>
                 <p>Tendencias y patrones a lo largo del tiempo</p>
                 <ul className="reporte-incluye">
-                  <li>✅ Ventas diarias/semanales</li>
-                  <li>✅ Estacionalidad</li>
-                  <li>✅ Proyecciones</li>
-                  <li>✅ Comparativas históricas</li>
+                  <li> Ventas diarias/semanales</li>  
+                  <li> Estacionalidad</li>
+                  <li> Proyecciones</li>
+                  <li> Comparativas históricas</li>
                 </ul>
               </div>
               <button 

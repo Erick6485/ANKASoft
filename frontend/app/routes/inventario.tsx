@@ -70,7 +70,7 @@ export default function Inventario() {
     <Layout>
       <div className="inventario-container">
         <div className="inventario-header">
-          <h1>📦 Dashboard de Inventario</h1>
+          <h1>Dashboard de Inventario</h1>
           <p>Control completo de stock y métricas de eficiencia</p>
         </div>
 

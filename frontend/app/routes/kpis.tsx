@@ -84,7 +84,7 @@ export default function KPIs() {
     <Layout>
       <div className="kpis-container">
         <div className="kpis-header">
-          <h1>📈 Indicadores Clave de Rendimiento (KPIs)</h1>
+          <h1> Indicadores Clave de Rendimiento (KPIs)</h1>
           <p>Métricas principales con comparativa vs período anterior</p>
           <span className="periodo-badge">{kpiData.periodo}</span>
         </div>
@@ -193,7 +193,7 @@ export default function KPIs() {
 
         {/* Sección de Insights */}
         <div className="insights-section">
-          <h3>💡 Insights y Recomendaciones</h3>
+          <h3> Insights y Recomendaciones</h3>
           <div className="insights-grid">
             {parseFloat(kpis.ventas_totales.variacion || '0') > 0 && (
               <div className="insight-card positivo">

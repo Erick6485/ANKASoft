@@ -50,7 +50,7 @@ export default function Alertas() {
     <Layout>
       <div className="alertas-container">
         <div className="alertas-header">
-          <h1>⚠️ Alertas de Stock</h1>
+          <h1> Alertas de Stock</h1>
           <p>Monitoreo de productos con inventario crítico</p>
         </div>
 

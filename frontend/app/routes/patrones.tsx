@@ -36,11 +36,11 @@ export default function PatronesCompra() {
     const productos = [...regla.antecedente, ...regla.consecuente];
     
     if (regla.confianza > 60) {
-      return `🎯 Crear combo promocional: ${productos.join(' + ')} con 15% de descuento`;
+      return ` Crear combo promocional: ${productos.join(' + ')} con 15% de descuento`;
     } else if (regla.confianza > 40) {
-      return `📍 Ubicar ${productos.join(' y ')} juntos en la tienda`;
+      return ` Ubicar ${productos.join(' y ')} juntos en la tienda`;
     } else {
-      return `💡 Considerar cross-selling entre ${productos.join(' y ')}`;
+      return ` Considerar cross-selling entre ${productos.join(' y ')}`;
     }
   };
 
@@ -61,7 +61,7 @@ export default function PatronesCompra() {
       <div className="patrones-container">
         {/* Header */}
         <div className="patrones-header">
-          <h1>🧠 Análisis de Patrones de Compra</h1>
+          <h1> Análisis de Patrones de Compra</h1>
           <p>Descubre qué productos se venden juntos y optimiza tu estrategia comercial</p>
         </div>
 
@@ -128,11 +128,11 @@ export default function PatronesCompra() {
                     </div>
                     
                     <p className="regla-stats">
-                      📊 {regla.soporte}% de los clientes compran estos productos juntos
+                       {regla.soporte}% de los clientes compran estos productos juntos
                     </p>
                     
                     <div className="regla-action">
-                      <strong>💡 Acción recomendada:</strong>
+                      <strong> Acción recomendada:</strong>
                       <p>{obtenerRecomendacion(regla)}</p>
                     </div>
                   </div>

@@ -88,6 +88,16 @@ export default function Dashboard() {
             <FaHome />
           </div>
           <div 
+            className={`sidebar-icon ${activeSection === 'centro-control' ? 'active' : ''}`}
+            onClick={() => {
+              setActiveSection('centro-control');
+              navigate('/centro-control');
+            }}
+            title="Centro de Control IA"
+          >
+            <FaRobot />
+          </div>
+          <div 
             className={`sidebar-icon ${activeSection === 'inventario' ? 'active' : ''}`}
             onClick={() => {
               setActiveSection('inventario');
