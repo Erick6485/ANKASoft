@@ -1,0 +1,22 @@
+# Variables de Entorno
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Entorno Virtual
+venv/
+
+# Base de Datos
+*.sqlite3
+*.db
+*.sql.backup
+*.dump
+
+# Sistema
+.DS_Store
+
