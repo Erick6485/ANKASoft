@@ -8,7 +8,12 @@ psycopg2-binary>=2.9.10
 
 # Validación y Variables de Entorno
 pydantic>=2.10.0
+pydantic[email]>=2.10.0
+email-validator>=2.0.0
 python-dotenv>=1.0.1
+
+# Autenticación y Seguridad
+python-jose[cryptography]>=3.3.0
 
 # Utilidades
 python-multipart>=0.0.12

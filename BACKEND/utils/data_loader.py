@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 from database import models
 from datetime import datetime, timedelta
 import random
+from utils.auth import get_password_hash
 
 # Datos realistas basados en el PDF de la hackatón
 CATEGORIAS_MUJER = ["ABRIGO", "BERMUDA", "BUZOS", "CAMISAS", "FALDA", "JEANS TERMINADOS", "PANTALONES", "VESTIDOS"]
@@ -13,6 +14,43 @@ TALLAS_ADULTOS = ["XXS", "XS", "S", "M", "L", "XL"]
 TALLAS_NIÑOS = ["4", "6", "8", "10", "12", "14", "16"]
 
 SUCURSALES = ["Sucursal Norte", "Sucursal Sur", "Sucursal Centro", "Sucursal Este"]
+
+def crear_usuarios_ejemplo(db: Session):
+    """Crear usuarios de ejemplo con diferentes roles"""
+    usuarios = [
+        models.Usuario(
+            username="admin",
+            email="admin@retailanalytics.com",
+            hashed_password=get_password_hash("admin123"),
+            nombre_completo="Administrador del Sistema",
+            rol=models.RolUsuario.ADMIN,
+            activo=True
+        ),
+        models.Usuario(
+            username="gerente",
+            email="gerente@retailanalytics.com",
+            hashed_password=get_password_hash("gerente123"),
+            nombre_completo="Gerente de Ventas",
+            rol=models.RolUsuario.GERENTE,
+            activo=True
+        ),
+        models.Usuario(
+            username="vendedor",
+            email="vendedor@retailanalytics.com",
+            hashed_password=get_password_hash("vendedor123"),
+            nombre_completo="Vendedor Principal",
+            rol=models.RolUsuario.VENDEDOR,
+            activo=True
+        )
+    ]
+    
+    db.add_all(usuarios)
+    db.commit()
+    print(f"✅ {len(usuarios)} usuarios creados")
+    print("   - admin / admin123 (Rol: ADMIN)")
+    print("   - gerente / gerente123 (Rol: GERENTE)")
+    print("   - vendedor / vendedor123 (Rol: VENDEDOR)")
+    return usuarios
 
 def crear_sucursales_ejemplo(db: Session):
     """Crear sucursales de ejemplo"""
@@ -149,10 +187,16 @@ def cargar_datos_ejemplo(db: Session):
         print("⚠️ Ya existen datos en la base de datos. Saltando carga...")
         return
     
+    usuarios = crear_usuarios_ejemplo(db)
     sucursales = crear_sucursales_ejemplo(db)
     productos = crear_productos_ejemplo(db)
     ventas = crear_ventas_ejemplo(db, productos, sucursales)
     
     print("🎉 Datos de ejemplo cargados exitosamente!")
-    return {"sucursales": len(sucursales), "productos": len(productos), "ventas": len(ventas)}
+    return {
+        "usuarios": len(usuarios),
+        "sucursales": len(sucursales),
+        "productos": len(productos),
+        "ventas": len(ventas)
+    }
 

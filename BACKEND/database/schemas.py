@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from datetime import date
+from datetime import date, datetime
 from typing import Optional
 from enum import Enum
 
@@ -8,6 +8,41 @@ class GeneroClienteEnum(str, Enum):
     HOMBRE = "hombre" 
     NIÑO = "niño"
     NIÑA = "niña"
+
+class RolUsuarioEnum(str, Enum):
+    ADMIN = "admin"
+    GERENTE = "gerente"
+    VENDEDOR = "vendedor"
+
+# Esquemas de Autenticación
+class UsuarioBase(BaseModel):
+    username: str
+    email: str
+    nombre_completo: Optional[str] = None
+    rol: RolUsuarioEnum = RolUsuarioEnum.VENDEDOR
+
+class UsuarioCreate(UsuarioBase):
+    password: str
+
+class UsuarioLogin(BaseModel):
+    username: str
+    password: str
+
+class UsuarioResponse(UsuarioBase):
+    id: int
+    activo: bool
+    fecha_creacion: datetime
+    
+    class Config:
+        from_attributes = True
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+    user: UsuarioResponse
+
+class TokenData(BaseModel):
+    username: Optional[str] = None
 
 class ProductoBase(BaseModel):
     nombre: str

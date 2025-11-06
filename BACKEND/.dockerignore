@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entorno Virtual
+venv/
+env/
+ENV/
+
+# Variables de Entorno (se pasan por docker-compose)
+.env
+.env.local
+
+# Base de Datos Local
+*.sqlite3
+*.db
+retail_analytics.db
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+temp/
+tmp/
+
+# Documentación temporal
+*.md.backup
+
+# OS
+.DS_Store
+Thumbs.db
+

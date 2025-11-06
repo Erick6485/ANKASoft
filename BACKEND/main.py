@@ -6,7 +6,7 @@ from database.connection import engine
 from contextlib import asynccontextmanager
 
 # Importar routers
-from routers import analytics, chatbot
+from routers import analytics, chatbot, auth, inventario, ventas, kpis, reportes
 
 # Configurar esquema de seguridad para Swagger UI
 api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
@@ -39,8 +39,13 @@ app.add_middleware(
 )
 
 # Incluir routers
+app.include_router(auth.router)
 app.include_router(analytics.router)
 app.include_router(chatbot.router)
+app.include_router(inventario.router)
+app.include_router(ventas.router)
+app.include_router(kpis.router)
+app.include_router(reportes.router)
 
 @app.get("/")
 def read_root():
@@ -55,6 +60,12 @@ def read_root():
             "nota": "Todos los endpoints de analytics requieren API Key"
         },
         "endpoints_principales": {
+            "autenticacion": [
+                "/api/auth/register 📝 (Registrarse)",
+                "/api/auth/login 🔐 (Iniciar sesión)",
+                "/api/auth/login-json 🔐 (Login alternativo)",
+                "/api/auth/me 👤 (Mi perfil)"
+            ],
             "analytics_basicos": [
                 "/api/analytics/productos-mas-vendidos 🔒",
                 "/api/analytics/rotacion-tallas 🔒", 

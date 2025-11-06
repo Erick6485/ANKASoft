@@ -30,9 +30,28 @@ retail-analytics-backend/
 ```
 
 ## Instalación
+
+### Opción 1: Con Docker (Recomendado)
+
+**Windows:**
+```bash
+docker-start.bat
+```
+
+**Linux/Mac:**
+```bash
+chmod +x docker-start.sh
+./docker-start.sh
+```
+
+### Opción 2: Instalación Manual
+
 1. python -m venv venv
 2. source venv/bin/activate  # o venv\Scripts\activate en Windows
 3. pip install -r requirements.txt
+4. python migrar_base_datos.py
+5. python cargar_datos.py
+6. python main.py
 
 ## Endpoints Disponibles
 
