@@ -1,0 +1,31 @@
+services:
+  # Backend API
+  - type: web
+    name: retail-analytics-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: retail-analytics-db
+          property: connectionString
+      - key: SECRET_KEY
+        value: clave_secreta_hackaton_2025_fup
+      - key: JWT_SECRET_KEY
+        value: clave_secreta_hackaton_2025_fup
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 30
+      - key: DEBUG
+        value: False
+
+databases:
+  # PostgreSQL Database
+  - name: retail-analytics-db
+    plan: free
+    databaseName: retail_analytics
+    user: retail_user
+

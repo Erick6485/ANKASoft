@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000';
-const API_KEY = 'retail_hackaton_2025_fup';
+// Usar variable de entorno en producción, localhost en desarrollo
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_KEY = import.meta.env.VITE_API_KEY || 'retail_hackaton_2025_fup';
 
 // Configurar axios
 const api = axios.create({
